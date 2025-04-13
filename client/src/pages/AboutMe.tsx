@@ -13,7 +13,7 @@ const AboutMe = ({ onClose }: AboutMeProps) => {
       className={`bg-[rgb(229,231,235)] fixed  left-1/2 transform -translate-x-1/2 rounded-lg ${
         isMaximize
           ? 'w-full h-[85%] mb-20'
-          : 'w-[90%] max-w-[600px] h-[70%] top-30'
+          : 'w-[90%] max-w-[600px] h-[70%] top-20'
       } ${isMinimize ? 'h-[40px]' : ''}`}
     >
       <div className="w-full h-full flex flex-col ">
@@ -39,7 +39,7 @@ const AboutMe = ({ onClose }: AboutMeProps) => {
               <h2 className='text-[30px]'>Software Developer</h2>
             </div>
           </div>
-          <p className="text-[20px] ">I was the owner of dessert shop.</p>
+          <p className="text-[20px] ">I am developer.</p>
         </div>
       </div>
     </div>
