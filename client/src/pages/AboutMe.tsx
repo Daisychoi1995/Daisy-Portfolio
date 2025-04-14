@@ -39,7 +39,7 @@ const AboutMe = ({ onClose }: AboutMeProps) => {
               <h2 className='text-[30px]'>Software Developer</h2>
             </div>
           </div>
-          <p className="text-[20px] ">I am developer.</p>
+          <p className="text-[20px] ">I believe the best developers are the ones who never stop learning — and I bring that mindset into every line of code.</p>
         </div>
       </div>
     </div>

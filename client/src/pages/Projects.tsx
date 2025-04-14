@@ -57,7 +57,7 @@ const Projects = ({ onClose }: { onClose: () => void }) => {
         <div className="flex flex-row p-4 overflow-auto gap-4">
           <div className="w-[30%]">
             {projects.map((project) => (
-              <div key={project.id} className="w-full h-[40%] items-center">
+              <div key={project.id} className="w-full h-1/4 items-center">
                 <h1 onClick={() => setActiveProject(project)}>
                   {project.name}
                 </h1>
@@ -65,7 +65,7 @@ const Projects = ({ onClose }: { onClose: () => void }) => {
             ))}
           </div>
           <div>
-            {activeProject?.name && projectComponents[activeProject.name]}
+            {projectComponents[activeProject?.name ?? 'Main']}
           </div>
         </div>
       </div>

@@ -21,3 +21,11 @@ model Project {
   url           String   @map("url")
   image_url     String   @map("image_url")
 }
+
+model Message {
+  id            Int      @id @default(autoincrement()) @map("id")
+  name          String   @map("name")
+  description   String   @map("description")
+  contact       String   @map("contact")
+  created_at    DateTime @map("createdAt")
+}
