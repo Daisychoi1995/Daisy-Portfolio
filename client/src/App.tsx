@@ -14,8 +14,8 @@ function App() {
         <MenuBar onSelect={setActiveMenu} />
         {activeMenu === 'about' && <AboutMe onClose={() => setActiveMenu('')}/>}
         {activeMenu === 'project' && <Projects onClose={() => setActiveMenu('')} />}
-        {activeMenu === 'gallery' && <Gallery onClose={() => setActiveMenu('')} />}
         {activeMenu === 'message' && <MessageMe onClose={() => setActiveMenu('')} />}
+        {activeMenu === 'gallery' && <Gallery onClose={() => setActiveMenu('')} />}
  
       </div>
 

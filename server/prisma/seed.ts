@@ -28,6 +28,17 @@ async function main() {
   ]
 
   })
+
+  await prisma.message.createMany({
+    data: [
+      {
+        name: "Daisy Choi",
+        description: "Hello Daisy",
+        contact: "chj15937@gmail.com",
+        created_at: new Date(),
+      }
+    ]
+  })
   console.log('✅ Seeded projects successfully!')
 }
 
