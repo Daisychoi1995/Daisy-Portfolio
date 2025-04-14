@@ -6,7 +6,7 @@ interface TitleBarProps {
 export default function TitleBar({ onClose, onMaximize, onMinimize }: TitleBarProps) {
 
   return (
-    <div className="h-[30px] bg-[#F3F4F6] border-b border-gray-200 flex items-center px-4 rounded-t-lg">
+    <div className="h-[30px] bg-[#F3F4F6] border-gray-200 flex items-center px-4 rounded-t-lg">
           <div className="flex space-x-2">
             <div
               onClick={onClose}
