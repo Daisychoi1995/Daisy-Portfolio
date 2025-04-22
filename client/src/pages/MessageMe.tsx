@@ -1,7 +1,8 @@
+import clsx from 'clsx'
 import { useState } from 'react'
 import TitleBar from '../components/TitleBar'
 import { useGetMessages } from '../hooks/useMessages'
-import clsx from 'clsx'
+import MessageForm from '../components/MessageForm'
 interface MessageMeProps {
   onClose: () => void
 }
@@ -10,10 +11,11 @@ const MessageMe = ({ onClose }: MessageMeProps) => {
   const [isMinimize, setIsMinimize] = useState(false)
   const [isMaximize, setIsMaximize] = useState(false)
   const { data: messages, isLoading, isError } = useGetMessages()
-
+  
   if (isLoading) return <p>Loading...</p>
   if (isError) return <p>Error!</p>
   if (!messages) return null
+  
   return (
     <div
           className={clsx(
@@ -44,6 +46,7 @@ const MessageMe = ({ onClose }: MessageMeProps) => {
             <p>{new Date(message.createdAt).toLocaleString()}</p>
           </li>)}</p>
         </div>
+        <MessageForm />
       </div>
     </div>
   )
