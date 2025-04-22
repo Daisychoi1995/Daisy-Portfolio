@@ -7,8 +7,8 @@ async function main() {
     data: [{
       name: 'ThreeBarFifty',
       description: 'ThreeBarFifty was originally my own dessert shop, which I ran as a solo business. I started it with love and grew it with creativity and effort. Later, I decided to rebuild its website using modern web technologies to gain full ownership over the user experience and performance. Though the physical business is no longer running, this project is a way for me to keep its memory alive forever — and it`s what inspired me to fall in love with web development.',
-      tech_stack: ['Next.js', 'tailwind', 'Firebase', 'Firebase auth', 'Zustand', 'Cloudinary', 'Typescript', 'React', 'Vitest'],
-      url: 'https://three-bar-fifty.firebaseapp.com/',
+      tech_stack: ['Next.js', 'tailwind', 'PostgreSQL', 'Prisma', 'Firebase auth', 'Zustand', 'Cloudinary', 'Typescript', 'React', 'Vitest'],
+      url: 'https://daisy-threebarfifty.vercel.app/',
       image_url: ''
     },
     {

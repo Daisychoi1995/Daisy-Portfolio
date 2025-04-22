@@ -29,7 +29,7 @@ const AboutMe = ({ onClose }: AboutMeProps) => {
           }}
         />
         <div className="flex flex-col p-4">
-          <div className="flex gap-4">
+          <div className="flex gap-4 mb-6">
             <img
               src="/assets/main.jpg"
               className="w-[200px] h-auto rounded-full overflow-auto"
@@ -39,7 +39,7 @@ const AboutMe = ({ onClose }: AboutMeProps) => {
               <h2 className='text-[30px]'>Software Developer</h2>
             </div>
           </div>
-          <p className="text-[20px] ">I believe the best developers are the ones who never stop learning — and I bring that mindset into every line of code.</p>
+          <p className="text-[20px] ">I believe the best developers are those who never stop learning and I bring that mindset into every line of code. My journey into software engineering began with threebarfifty, a small dessert shop I started. Frustrated by the limitations of platforms like Wix, I wanted more control, which led me to discover my passion for coding. Since then, I've been continuously learning and growing, combining my technical skills with my entrepreneurial spirit to create impactful solutions.</p>
         </div>
       </div>
     </div>
