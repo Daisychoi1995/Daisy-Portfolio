@@ -1,6 +1,5 @@
 import clsx from 'clsx'
 import { useState } from 'react'
-import { JSX } from 'react/jsx-runtime'
 import MainProjectCard from '../components/MainProjectCard'
 import ProjectCard from '../components/ProjectCard'
 import TitleBar from '../components/TitleBar'
@@ -17,19 +16,9 @@ const Projects = ({ onClose }: { onClose: () => void }) => {
   if (isError) return <p>Error!</p>
   if (!projects) return null
 
-  const projectComponents: Record<string, JSX.Element> = {
-    Main: <MainProjectCard />,
-    'Todo List': activeProject ? (
-      <ProjectCard project={activeProject} />
-    ) : (
-      <></>
-    ),
-    ThreeBarFifty: activeProject ? (
-      <ProjectCard project={activeProject} />
-    ) : (
-      <></>
-    ),
-    Portfolio: activeProject ? <ProjectCard project={activeProject} /> : <></>,
+  const renderProjectComponent = () => {
+    if (!activeProject) return <MainProjectCard />
+    return <ProjectCard project={activeProject} />
   }
 
   return (
@@ -38,7 +27,7 @@ const Projects = ({ onClose }: { onClose: () => void }) => {
         'bg-[rgb(229,231,235)] fixed left-1/2 transform -translate-x-1/2 rounded-lg',
         isMaximize
           ? 'w-full h-[85%] mb-20'
-          : 'w-[90%] max-w-[600px] h-[70%] top-20',
+          : 'w-[100%] max-w-[900px] h-[70%] top-20',
         isMinimize && 'h-[40px]'
       )}
     >
@@ -54,19 +43,27 @@ const Projects = ({ onClose }: { onClose: () => void }) => {
             setIsMaximize(true)
           }}
         />
-        <div className="flex flex-row p-4 overflow-auto gap-4">
-          <div className="w-[30%]">
-            {projects.map((project) => (
-              <div key={project.id} className="w-full h-1/4 items-center">
-                <h1 onClick={() => setActiveProject(project)}>
-                  {project.name}
-                </h1>
+        <div className="flex flex-row p-4 gap-4 h-full min-h-0">
+          <div className="w-[30%] overflow-auto">
+            <div className="w-full h-1/4 items-center">
+            <div className="py-4 border-b-1 border-[rgb(134,126,126)] cursor-pointer">
+              <h1
+                className="text-[30px] pl-2"
+                onClick={() => setActiveProject(undefined)}
+              >
+                Main
+              </h1>
               </div>
-            ))}
+              {projects.map((project) => (
+                <div key={project.id} className="py-4 border-b-1 border-[rgb(134,126,126)] cursor-pointer">
+                  <h1 onClick={() => setActiveProject(project)} className="text-[30px] pl-2">
+                    {project.name}
+                  </h1>
+                </div>
+              ))}
+            </div>
           </div>
-          <div>
-            {projectComponents[activeProject?.name ?? 'Main']}
-          </div>
+          <div className="w-[70%] h-full">{renderProjectComponent()}</div>
         </div>
       </div>
     </div>
