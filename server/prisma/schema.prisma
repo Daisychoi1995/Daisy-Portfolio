@@ -29,3 +29,12 @@ model Message {
   contact       String   @map("contact")
   created_at    DateTime @map("createdAt")
 }
+
+model MessageExample {
+  id            Int      @id @default(autoincrement()) @map("id")
+  name          String   @map("name")
+  question      String   @map("question")
+  description   String   @map("description")
+  contact       String   @map("contact")
+  created_at    DateTime @map("createdAt")
+}

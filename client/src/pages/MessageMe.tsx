@@ -1,8 +1,10 @@
 import clsx from 'clsx'
 import { useState } from 'react'
+import MessageCard from '../components/MessageCard'
 import TitleBar from '../components/TitleBar'
 import { useGetMessages } from '../hooks/useMessages'
-import MessageForm from '../components/MessageForm'
+import { Message } from '../models/Messages'
+import getCasualTimestamp from '../lib/getCasualTimestamp'
 interface MessageMeProps {
   onClose: () => void
 }
@@ -11,21 +13,25 @@ const MessageMe = ({ onClose }: MessageMeProps) => {
   const [isMinimize, setIsMinimize] = useState(false)
   const [isMaximize, setIsMaximize] = useState(false)
   const { data: messages, isLoading, isError } = useGetMessages()
-  
+  const [activeMessage, setActiveMessage] = useState<Message | undefined>(messages?.find(message => message.id === 1))
+
   if (isLoading) return <p>Loading...</p>
   if (isError) return <p>Error!</p>
-  if (!messages) return null
-  
+  if (!messages || !activeMessage) return null
+
+  const renderMessageComponent = () => {
+    return <MessageCard message={activeMessage} />
+  }
   return (
     <div
-          className={clsx(
-            'bg-[rgb(229,231,235)] fixed left-1/2 transform -translate-x-1/2 rounded-lg',
-            isMaximize
-              ? 'w-full h-[85%] mb-20'
-              : 'w-[100%] max-w-[900px] h-[70%] top-20',
-            isMinimize && 'h-[40px]'
-          )}
-        >
+      className={clsx(
+        'bg-[rgb(229,231,235)] fixed left-1/2 transform -translate-x-1/2 rounded-lg',
+        isMaximize
+          ? 'w-full h-[85%] mb-20'
+          : 'w-[100%] max-w-[900px] h-[70%] top-20',
+        isMinimize && 'h-[40px]'
+      )}
+    >
       <div className="w-full h-full flex flex-col ">
         <TitleBar
           onClose={onClose}
@@ -38,15 +44,23 @@ const MessageMe = ({ onClose }: MessageMeProps) => {
             setIsMaximize(true)
           }}
         />
-        <div className="flex flex-col p-4">
-          <p>{messages.map(message => <li key={message.id}>
-            <p>{message.name}</p>
-            <p>{message.description}</p>
-            <p>{message.contact}</p>
-            <p>{new Date(message.createdAt).toLocaleString()}</p>
-          </li>)}</p>
+        <div className='flex flex-row p-4 gap-4 h-full min-h-0'>
+        <div className="flex flex-col overflow-auto w-[30%]">
+          <div>
+            {messages.map((message) => (
+              <div key={message.id} onClick={() => setActiveMessage(message)} className='py-4 border-b-1 border-[rgb(134,126,126)] cursor-pointer'>
+                <p className='text-[20px] font-bold'>{message.name}</p>
+                <p className='text-[18px]'>{message.description}</p>
+                <p className='text-[12px]'>{getCasualTimestamp(message.createdAt)}</p>
+              </div>
+            ))}
+          </div>
         </div>
-        <MessageForm />
+        <div className="w-[70%] h-full">
+          {renderMessageComponent()}
+        
+        </div>
+        </div>
       </div>
     </div>
   )

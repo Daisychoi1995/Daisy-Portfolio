@@ -39,6 +39,18 @@ async function main() {
       }
     ]
   })
+
+  await prisma.messageExample.createMany({
+    data: [
+      {
+        name: "Daisy Choi",
+        question: "How to contact you?",
+        description: "Feel free to reach out to me through any of the following channels: message section: Directly message me here | email: chj15937@gmail.com",
+        contact: "chj15937@gmail.com",
+        created_at: new Date(),
+      }
+    ]
+  })
   console.log('✅ Seeded projects successfully!')
 }
 
