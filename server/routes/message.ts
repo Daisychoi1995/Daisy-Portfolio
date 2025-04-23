@@ -8,7 +8,7 @@ const prisma = new PrismaClient
 
 router.get('/', async (req, res) => {
   try {
-    const messages = await prisma.message.findMany()
+    const messages = await prisma.messageExample.findMany()
     res.json(camelcaseKeys(messages, { deep: true }))
     
   } catch (error) {

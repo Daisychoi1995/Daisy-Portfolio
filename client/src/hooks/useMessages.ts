@@ -4,7 +4,7 @@ import { MessageData } from '../models/Messages'
 
 export function useGetMessages() {
   const query = useQuery({
-    queryKey: ['messages'],
+    queryKey: ['messageExamples'],
     queryFn: getMessages,
   })
   return query

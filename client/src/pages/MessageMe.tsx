@@ -3,17 +3,20 @@ import { useState } from 'react'
 import MessageCard from '../components/MessageCard'
 import TitleBar from '../components/TitleBar'
 import { useGetMessages } from '../hooks/useMessages'
-import { Message } from '../models/Messages'
 import getCasualTimestamp from '../lib/getCasualTimestamp'
+import { MessageExample } from '../models/Messages'
 interface MessageMeProps {
   onClose: () => void
 }
 
 const MessageMe = ({ onClose }: MessageMeProps) => {
+  const { data: messages, isLoading, isError } = useGetMessages()
   const [isMinimize, setIsMinimize] = useState(false)
   const [isMaximize, setIsMaximize] = useState(false)
-  const { data: messages, isLoading, isError } = useGetMessages()
-  const [activeMessage, setActiveMessage] = useState<Message | undefined>(messages?.find(message => message.id === 1))
+  const [activeMessage, setActiveMessage] = useState<
+    MessageExample | undefined
+  >(messages?.find((message) => message.id === 1))
+  const [hover, setHover] = useState(false)
 
   if (isLoading) return <p>Loading...</p>
   if (isError) return <p>Error!</p>
@@ -22,6 +25,7 @@ const MessageMe = ({ onClose }: MessageMeProps) => {
   const renderMessageComponent = () => {
     return <MessageCard message={activeMessage} />
   }
+
   return (
     <div
       className={clsx(
@@ -44,22 +48,28 @@ const MessageMe = ({ onClose }: MessageMeProps) => {
             setIsMaximize(true)
           }}
         />
-        <div className='flex flex-row p-4 gap-4 h-full min-h-0'>
-        <div className="flex flex-col overflow-auto w-[30%]">
-          <div>
-            {messages.map((message) => (
-              <div key={message.id} onClick={() => setActiveMessage(message)} className='py-4 border-b-1 border-[rgb(134,126,126)] cursor-pointer'>
-                <p className='text-[20px] font-bold'>{message.name}</p>
-                <p className='text-[18px]'>{message.description}</p>
-                <p className='text-[12px]'>{getCasualTimestamp(message.createdAt)}</p>
-              </div>
-            ))}
+        <div className="flex flex-row p-4 gap-4 h-full min-h-0">
+          <div className="flex flex-col overflow-auto w-[30%]">
+            <div>
+              {messages.map((message) => (
+                <div
+                  key={message.id}
+                  onClick={() => setActiveMessage(message)}
+                  className={clsx(
+                    'py-4 px-2 border-b-1 border-[rgb(134,126,126)] cursor-pointer',
+                    activeMessage.id === message.id && 'bg-gray-300'
+                  )}
+                >
+                  <p className="text-[20px] font-bold">{message.name}</p>
+                  <p className="text-[18px]">{message.description}</p>
+                  <p className="text-[12px]">
+                    {getCasualTimestamp(message.createdAt)}
+                  </p>
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
-        <div className="w-[70%] h-full">
-          {renderMessageComponent()}
-        
-        </div>
+          <div className="w-[70%] h-full">{renderMessageComponent()}</div>
         </div>
       </div>
     </div>
