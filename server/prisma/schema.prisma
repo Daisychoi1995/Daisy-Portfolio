@@ -19,6 +19,7 @@ model Project {
   description   String   @map("description")
   tech_stack    String[] @map("tech_stack")
   url           String   @map("url")
+  github        String   @map("github")
   image_url     String   @map("image_url")
 }
 

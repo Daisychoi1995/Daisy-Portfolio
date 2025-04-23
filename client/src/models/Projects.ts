@@ -4,5 +4,6 @@ export interface Project {
   description: string
   techStack: string[]
   url: string
+  github: string
   imageUrl: string
 }

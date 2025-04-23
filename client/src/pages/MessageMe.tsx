@@ -16,7 +16,6 @@ const MessageMe = ({ onClose }: MessageMeProps) => {
   const [activeMessage, setActiveMessage] = useState<
     MessageExample | undefined
   >(messages?.find((message) => message.id === 1))
-  const [hover, setHover] = useState(false)
 
   if (isLoading) return <p>Loading...</p>
   if (isError) return <p>Error!</p>
@@ -57,11 +56,11 @@ const MessageMe = ({ onClose }: MessageMeProps) => {
                   onClick={() => setActiveMessage(message)}
                   className={clsx(
                     'py-4 px-2 border-b-1 border-[rgb(134,126,126)] cursor-pointer',
-                    activeMessage.id === message.id && 'bg-gray-300'
+                    activeMessage.id === message.id && 'bg-gray-300 rounded-lg'
                   )}
                 >
                   <p className="text-[20px] font-bold">{message.name}</p>
-                  <p className="text-[18px]">{message.description}</p>
+                  <p className="text-[18px]">{message.question}</p>
                   <p className="text-[12px]">
                     {getCasualTimestamp(message.createdAt)}
                   </p>

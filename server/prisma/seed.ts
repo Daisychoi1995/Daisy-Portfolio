@@ -9,21 +9,32 @@ async function main() {
       description: 'ThreeBarFifty was originally my own dessert shop, which I ran as a solo business. I started it with love and grew it with creativity and effort. Later, I decided to rebuild its website using modern web technologies to gain full ownership over the user experience and performance. Though the physical business is no longer running, this project is a way for me to keep its memory alive forever — and it`s what inspired me to fall in love with web development.',
       tech_stack: ['Next.js', 'Vercel', 'tailwind', 'PostgreSQL', 'Prisma', 'Firebase auth', 'Zustand', 'Cloudinary', 'Typescript', 'React', 'Vitest'],
       url: 'https://daisy-threebarfifty.vercel.app/',
-      image_url: '/client/public/assets/logo.webp'
+      github: 'https://github.com/Daisychoi1995/Daisy_Threebarfifty',
+      image_url: '/assets/logo.webp'
     },
     {
       name: 'Todo List',
       description: 'This Todo List app is my first full-stack project, built to practice creating and connecting RESTful APIs, managing application state, and integrating a backend. It was a hands-on way to understand how front-end and back-end communicate. I used a SQLite3 database for storing tasks and implemented full CRUD (Create, Read, Update, Delete) functionality from scratch.',
       tech_stack: ['React', 'Sqlite3', 'Express', 'Superagent', 'Typescript', 'Knex', 'Tailwind'],
       url: 'http://daisy-todo.devacademy.nz/',
-      image_url: '/client/public/assets/todo.jpg'
+      github: '',
+      image_url: '/assets/todo.jpg'
     },
     {
       name: 'Portfolio',
       description: 'This portfolio was inspired by the macOS interface I use every day, with a custom design that reflects my style. Instead of traditional multi-page navigation, I used a single-page application (SPA) approach that dynamically renders components based on state, offering a smooth, desktop-like experience. It`s built with an emphasis on simplicity, maintainability, and a seamless user experience, showcasing both my technical expertise and design sensibilities.',
       tech_stack: ['React', 'PostgreSQL', 'Prisma', 'Express', 'Axios', 'Typescript', 'Tailwind', ],
-      url: 'Working on it! ',
+      url: '',
+      github: 'https://github.com/Daisychoi1995/Daisy-Portfolio',
       image_url: ''
+    },
+    {
+      name: 'Geared Up',
+      description: 'My final group showcase project! I teamed up with five awesome developers to build everything from scratch. It was my first time working in a group this big—before, I`d only collaborated with 2 or 3 people, so it definitely came with new challenges. But honestly, that made it even more rewarding. We learned how to align our ideas, divide tasks effectively, and truly function as a team. One thing I`m super proud of? We wrote 43 tests to keep our codebase solid—definitely the most I`ve ever done in a project. It was intense, fun, and a huge step up in both teamwork and technical skills!',
+      tech_stack: ['React', 'Sqlite3', 'Express', 'Typescript', 'Tailwind', 'Knex', 'Auth0', 'Superagent', 'Vite', 'Vitest', 'Nock', 'React Testing Library'],
+      url: '',
+      github: 'https://github.com/Daisychoi1995/GearedUp',
+      image_url: '/assets/geared-up.png'
     }
   ]
 
