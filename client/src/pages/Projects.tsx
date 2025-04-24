@@ -9,18 +9,17 @@ import { Project } from '../models/Projects'
 const Projects = ({ onClose }: { onClose: () => void }) => {
   const [isMinimize, setIsMinimize] = useState(false)
   const [isMaximize, setIsMaximize] = useState(false)
-  const [activeProject, setActiveProject] = useState<Project>()
   const { data: projects, isLoading, isError } = useGetProjects()
+  const [activeProject, setActiveProject] = useState<Project | string>('main')
 
   if (isLoading) return <p>Loading...</p>
   if (isError) return <p>Error!</p>
   if (!projects) return null
 
   const renderProjectComponent = () => {
-    if (!activeProject) return <MainProjectCard />
+    if (typeof activeProject === 'string') return <MainProjectCard />
     return <ProjectCard project={activeProject} />
   }
-
   return (
     <div
       className={clsx(
@@ -46,19 +45,27 @@ const Projects = ({ onClose }: { onClose: () => void }) => {
         <div className="flex flex-row p-4 gap-4 h-full min-h-0">
           <div className="w-[30%] overflow-auto">
             <div className="w-full h-1/4 items-center">
-            <div className="py-4 border-b-1 border-[rgb(134,126,126)] cursor-pointer">
-              <h1
-                className="text-[30px] pl-2"
-                onClick={() => setActiveProject(undefined)}
+              <div
+                className={clsx(
+                  'py-4 px-2 border-b border-[rgb(134,126,126)] cursor-pointer',
+                  typeof activeProject === 'string' && 'bg-gray-300 rounded-lg'
+                )}
+                onClick={() => setActiveProject('main')}
               >
-                Main
-              </h1>
+                <h1 className="text-[20px] pl-2">Tech Stack</h1>
               </div>
               {projects.map((project) => (
-                <div key={project.id} className="py-4 border-b-1 border-[rgb(134,126,126)] cursor-pointer">
-                  <h1 onClick={() => setActiveProject(project)} className="text-[30px] pl-2">
-                    {project.name}
-                  </h1>
+                <div
+                  key={project.id}
+                  onClick={() => setActiveProject(project)}
+                  className={clsx(
+                    'py-4 px-2 border-b border-[rgb(134,126,126)] cursor-pointer',
+                    typeof activeProject !== 'string' &&
+                      activeProject?.id === project.id &&
+                      'bg-gray-300 rounded-lg'
+                  )}
+                >
+                  <h1 className="text-[20px] pl-2">{project.name}</h1>
                 </div>
               ))}
             </div>

@@ -5,7 +5,7 @@ export default function ProjectCard({ project }: { project: Project }) {
     <div className="w-full h-full bg-white py-2 px-8 rounded shadow mb-4 overflow-auto">
       <div className='flex flex-col justify-center items-center mb-6'>
       <h2 className="text-[40px] font-bold ustify-center">{project.name}</h2>
-      <a href={project.url}><img src={project.imageUrl} alt={project.name} className='w-80 my-4'/></a>
+      {project.imageUrl.length > 0 && <a href={project.url}><img src={project.imageUrl} alt={project.name} className='w-80 my-4'/></a>}
       </div>
       <p className='mb-4'>{project.description}</p>
       <p className="text-lg font-semibold mb-2">Tech Stack:</p>

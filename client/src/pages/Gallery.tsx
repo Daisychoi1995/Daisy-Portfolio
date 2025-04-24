@@ -33,7 +33,7 @@ const Gallery = ({ onClose }: GalleryProps) => {
         />
         <div className="flex flex-col p-4">
      
-         <p>Comming...</p>
+         <p>Comming soon...</p>
         </div>
       </div>
     </div>
