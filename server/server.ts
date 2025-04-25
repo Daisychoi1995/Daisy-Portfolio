@@ -1,7 +1,7 @@
 import cors from 'cors'
 import express from 'express'
-import projectRoute from './routes/project.js'
-import messageRoute from './routes/message.js'
+import projectRoute from './routes/project'
+import messageRoute from './routes/message'
 
 const PORT = process.env.PORT || 5000
 const app = express()

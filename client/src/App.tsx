@@ -7,7 +7,7 @@ import MessageMe from './pages/MessageMe'
 
 //bg-[url('/assets/wallpaper.jpg)']
 function App() {
-  const [activeMenu, setActiveMenu] = useState('about')
+  const [activeMenu, setActiveMenu] = useState('')
   return (
       <div className="bg-[url('/assets/wallpaper.jpg')] bg-cover bg-center h-screen">
         

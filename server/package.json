@@ -3,9 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-    "type": "module",
   "scripts": {
-    "dev": "nodemon --watch './**/*.ts' --exec 'ts-node --project tsconfig.json' server.ts",
+    "dev": "nodemon --watch './**/*.ts' --exec 'ts-node --project tsconfig.json' ./server.ts",
     "build": "tsc",
     "start": "node dist/server.js",
     "prisma:generate": "prisma generate",
