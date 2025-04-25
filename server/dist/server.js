@@ -9,11 +9,16 @@ const project_js_1 = __importDefault(require("./routes/project.js"));
 const message_js_1 = __importDefault(require("./routes/message.js"));
 const PORT = process.env.PORT || 5000;
 const app = (0, express_1.default)();
+const allowedOrigins = [
+    'https://daisy-portfolio-4fuhpugy4-daisychoi1995s-projects.vercel.app',
+    'https://daisy-portfolio-g97xmi3hs-daisychoi1995s-projects.vercel.app',
+    'https://daisy-portfolio-production.up.railway.app',
+    'http://localhost:5173',
+];
 app.use((0, cors_1.default)({
-    origin: [
-        'https://daisy-portfolio-g97xmi3hs-daisychoi1995s-projects.vercel.app',
-        'http://localhost:5173',
-    ],
+    origin: '*',
+    credentials: true,
+    methods: '*',
 }));
 app.use(express_1.default.json());
 app.use('/api/v1/projects', project_js_1.default);
