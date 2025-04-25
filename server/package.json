@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon --watch './**/*.ts' --exec 'ts-node --project tsconfig.json' ./server.ts",
+    "dev": "tsc && nodemon --watch './dist/**/*.js' --exec 'node' ./dist/server.js",
     "build": "tsc",
     "start": "node dist/server.js",
     "prisma:generate": "prisma generate",

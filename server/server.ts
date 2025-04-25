@@ -6,10 +6,14 @@ import messageRoute from './routes/message'
 const PORT = process.env.PORT || 5000
 const app = express()
 
-
-app.use(cors({
-  origin: 'https://daisy-portfolio-g97xmi3hs-daisychoi1995s-projects.vercel.app',
-}))
+app.use(
+  cors({
+    origin: [
+      'https://daisy-portfolio-g97xmi3hs-daisychoi1995s-projects.vercel.app',
+      'http://localhost:5173',
+    ],
+  })
+)
 
 app.use(express.json())
 
