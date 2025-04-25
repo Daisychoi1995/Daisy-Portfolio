@@ -1,5 +1,4 @@
 import { PrismaClient } from '@prisma/client'
-import camelcaseKeys from 'camelcase-keys'
 import express from 'express'
 import snakecaseKeys from 'snakecase-keys'
 
@@ -9,7 +8,7 @@ const prisma = new PrismaClient()
 router.get('/', async (req, res) => {
   try {
     const messages = await prisma.messageExample.findMany()
-    res.json(camelcaseKeys(messages, { deep: true }))
+    res.json(messages)
     
   } catch (error) {
     res.status(500).json({ error: "Error fetching projects" })
