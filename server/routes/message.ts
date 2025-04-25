@@ -4,7 +4,7 @@ import express from 'express'
 import snakecaseKeys from 'snakecase-keys'
 
 const router = express.Router()
-const prisma = new PrismaClient
+const prisma = new PrismaClient()
 
 router.get('/', async (req, res) => {
   try {
