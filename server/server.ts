@@ -6,14 +6,15 @@ import messageRoute from './routes/message.js'
 const PORT = process.env.PORT || 5000
 const app = express()
 
-app.use(
-  cors({
-    origin: [
-      'https://daisy-portfolio-g97xmi3hs-daisychoi1995s-projects.vercel.app',
-      'http://localhost:5173',
-    ],
-  })
-)
+const allowedOrigins = [
+  'https://daisy-portfolio-4fuhpugy4-daisychoi1995s-projects.vercel.app',
+  'https://daisy-portfolio-g97xmi3hs-daisychoi1995s-projects.vercel.app',
+  'http://localhost:5173',
+]
+app.use(cors({
+  origin: allowedOrigins,
+  methods: 'GET,POST,PUT,DELETE',
+}))
 
 app.use(express.json())
 
