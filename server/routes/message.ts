@@ -7,8 +7,12 @@ const prisma = new PrismaClient()
 
 router.get('/', async (req, res) => {
   try {
-    const messages = await prisma.messageExample.findMany()
-    res.json(messages)
+    const result = await prisma.messageExample.findMany()
+    const messageExample = result.map(({ created_at, ...rest }) => ({
+      ...rest,
+      createdAt: created_at
+    }))
+    res.json(messageExample)
     
   } catch (error) {
     res.status(500).json({ error: "Error fetching projects" })

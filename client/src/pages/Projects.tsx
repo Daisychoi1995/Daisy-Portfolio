@@ -10,15 +10,16 @@ const Projects = ({ onClose }: { onClose: () => void }) => {
   const [isMinimize, setIsMinimize] = useState(false)
   const [isMaximize, setIsMaximize] = useState(false)
   const { data: projects, isLoading, isError } = useGetProjects()
-  const [activeProject, setActiveProject] = useState<Project | string>('main')
+  const [activeProject, setActiveProject] = useState<Project | 'main'>('main')
 
   if (isLoading) return <p>Loading...</p>
   if (isError) return <p>Error!</p>
   if (!projects) return null
 
   const renderProjectComponent = () => {
-    if (typeof activeProject === 'string') return <MainProjectCard />
-    return <ProjectCard project={activeProject} />
+    return activeProject === 'main'
+    ? <MainProjectCard />
+    : <ProjectCard project={activeProject} />
   }
   return (
     <div

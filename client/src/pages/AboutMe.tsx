@@ -42,15 +42,24 @@ const AboutMe = ({ onClose }: AboutMeProps) => {
               <h2 className="text-[30px]">Software Developer</h2>
             </div>
           </div>
-          <p className="text-[20px] ">
-            I believe the best developers are those who never stop learning and
-            I bring that mindset into every line of code. My journey into
-            software engineering began with threebarfifty, a small dessert shop
-            I started. Frustrated by the limitations of platforms like Wix, I
-            wanted more control, which led me to discover my passion for coding.
-            Since then, I've been continuously learning and growing, combining
-            my technical skills with my entrepreneurial spirit to create
-            impactful solutions.
+          <p>
+            I believe the best developers are those who never stop learning, and
+            I bring that mindset into every line of code.
+          </p>
+          <p>
+            My journey into software engineering began with threebarfifty, a
+            small dessert shop I started.
+          </p>
+          <p>
+            Wanting to take my business to the next level, I realized I needed
+            more control over the process. That's when I discovered my passion
+            for coding.
+          </p>
+          <p>
+            I'm someone who loves to challenge myself, and diving into coding
+            felt like the perfect challenge. Since then, I've been continuously
+            learning and growing, combining my technical skills with my
+            entrepreneurial spirit to create impactful solutions.
           </p>
         </div>
       </div>
