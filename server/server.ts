@@ -9,6 +9,7 @@ const app = express()
 const allowedOrigins = [
   'https://daisy-portfolio-4fuhpugy4-daisychoi1995s-projects.vercel.app',
   'https://daisy-portfolio-g97xmi3hs-daisychoi1995s-projects.vercel.app',
+  'https://daisy-portfolio-production.up.railway.app',
   'http://localhost:5173',
 ]
 app.use(cors({
