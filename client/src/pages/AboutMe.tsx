@@ -31,8 +31,8 @@ const AboutMe = ({ onClose }: AboutMeProps) => {
             setIsMaximize(true)
           }}
         />
-        <div className="flex flex-col p-12">
-          <div className="flex gap-4 mb-6">
+        <div className="flex flex-col p-8 overflow-scroll h-full min-h-0">
+          <div className="flex gap-4 mb-6 justify-center">
             <img
               src="/assets/main.jpg"
               className="w-[200px] h-auto rounded-full overflow-auto"
@@ -42,25 +42,15 @@ const AboutMe = ({ onClose }: AboutMeProps) => {
               <h2 className="text-[30px]">Software Developer</h2>
             </div>
           </div>
-          <p>
-            I believe the best developers are those who never stop learning, and
-            I bring that mindset into every line of code.
-          </p>
-          <p>
-            My journey into software engineering began with threebarfifty, a
-            small dessert shop I started.
-          </p>
-          <p>
-            Wanting to take my business to the next level, I realized I needed
-            more control over the process. That's when I discovered my passion
-            for coding.
-          </p>
-          <p>
-            I'm someone who loves to challenge myself, and diving into coding
-            felt like the perfect challenge. Since then, I've been continuously
-            learning and growing, combining my technical skills with my
-            entrepreneurial spirit to create impactful solutions.
-          </p>
+          <div className='px-12'>
+          <ul>
+  <li>💡 I believe the best developers are those who never stop learning, and I bring that mindset into every line of code. 🚀</li>
+  <li>🍰 My journey into software engineering began with <strong>threebarfifty</strong>, a small dessert shop I started. 🍩</li>
+  <li>💡 Wanting to take my business to the next level, I realized I needed more control over the process. That's when I discovered my passion for coding. 💻❤️</li>
+  <li>🎯 I'm someone who loves to challenge myself, and diving into coding felt like the perfect challenge. Since then, I've been continuously learning 📚 and growing 🌱.</li>
+  <li>💼 I combine my technical skills with my entrepreneurial spirit to create impactful solutions that make a difference! 🌟</li>
+</ul>
+          </div>
         </div>
       </div>
     </div>
