@@ -17,7 +17,7 @@ export default function MainProjectCart() {
 
   const backend: Tech[] = [
     { name: 'Express', level: 5 },
-    { name: '.NET', level: 1 },
+    { name: '.NET', level: 2 },
     { name: 'Prisma', level: 4 },
     { name: 'Node.js', level: 4 },
     { name: 'Stripe', level: 4 },
