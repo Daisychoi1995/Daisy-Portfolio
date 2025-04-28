@@ -5,6 +5,7 @@ import ProjectCard from '../components/ProjectCard'
 import TitleBar from '../components/TitleBar'
 import { useGetProjects } from '../hooks/useProjects'
 import { Project } from '../models/Projects'
+import LoadingPage from '../components/LoadingPage'
 
 const Projects = ({ onClose }: { onClose: () => void }) => {
   const [isMinimize, setIsMinimize] = useState(false)
@@ -12,7 +13,7 @@ const Projects = ({ onClose }: { onClose: () => void }) => {
   const { data: projects, isLoading, isError } = useGetProjects()
   const [activeProject, setActiveProject] = useState<Project | 'main'>('main')
 
-  if (isLoading) return <p>Loading...</p>
+  if (isLoading) return <LoadingPage />
   if (isError) return <p>Error!</p>
   if (!projects) return null
 
@@ -49,7 +50,7 @@ const Projects = ({ onClose }: { onClose: () => void }) => {
               <div
                 className={clsx(
                   'py-4 px-2 border-b border-[rgb(134,126,126)] cursor-pointer',
-                  typeof activeProject === 'string' && 'bg-gray-300 rounded-lg'
+                  typeof activeProject === 'string' && 'bg-gray-300'
                 )}
                 onClick={() => setActiveProject('main')}
               >
@@ -63,7 +64,7 @@ const Projects = ({ onClose }: { onClose: () => void }) => {
                     'py-4 px-2 border-b border-[rgb(134,126,126)] cursor-pointer',
                     typeof activeProject !== 'string' &&
                       activeProject?.id === project.id &&
-                      'bg-gray-300 rounded-lg'
+                      'bg-gray-300'
                   )}
                 >
                   <h1 className="text-[20px] pl-2">{project.name}</h1>

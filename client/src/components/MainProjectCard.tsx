@@ -43,7 +43,7 @@ export default function MainProjectCart() {
       <h1 className="text-[30px] my-4">💻 Frontend</h1>
       <div className="grid grid-cols-2 gap-8 mb-6">
         {frontend.map((item) => (
-          <div className="flex flex-row gap-4 w-full min-w-[200px] max-w-[300px] justify-between">
+          <div key={item.name} className="flex flex-row gap-4 w-full min-w-[200px] max-w-[300px] justify-between">
             <p className="text-[20px]">{item.name}</p>
             <p className="flex justify-center items-center">
               {TechLevelDots(item.level)}
@@ -55,7 +55,7 @@ export default function MainProjectCart() {
       <h1 className="text-[30px] my-4">🔧 Backend</h1>
       <div className="grid grid-cols-2 gap-8 mb-6">
         {backend.map((item) => (
-          <div className="flex flex-row gap-4 w-full min-w-[200px] max-w-[300px] justify-between">
+          <div key={item.name} className="flex flex-row gap-4 w-full min-w-[200px] max-w-[300px] justify-between">
             <p className="text-[20px]">{item.name}</p>
             <p className="flex justify-center items-center">
               {TechLevelDots(item.level)}
@@ -67,7 +67,7 @@ export default function MainProjectCart() {
       <h1 className="text-[30px] my-4">🗄️ Database</h1>
       <div className="grid grid-cols-2 gap-8 mb-6">
         {database.map((item) => (
-          <div className="flex flex-row gap-4 w-full min-w-[200px] max-w-[300px] justify-between">
+          <div key={item.name} className="flex flex-row gap-4 w-full min-w-[200px] max-w-[300px] justify-between">
             <p className="text-[20px]">{item.name}</p>
             <p className="flex justify-center items-center">
               {TechLevelDots(item.level)}
@@ -79,7 +79,7 @@ export default function MainProjectCart() {
       <h1 className="text-[30px] my-4">⚙️ Tools / Infrastructure</h1>
       <div className="grid grid-cols-2 gap-8 mb-6">
         {tools.map((item) => (
-          <div className="flex flex-row gap-4 w-full min-w-[200px] max-w-[300px] justify-between">
+          <div key={item.name} className="flex flex-row gap-4 w-full min-w-[200px] max-w-[300px] justify-between">
             <p className="text-[20px]">{item.name}</p>
             <p className="flex justify-center items-center">
               {TechLevelDots(item.level)}

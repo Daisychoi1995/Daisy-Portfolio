@@ -5,6 +5,7 @@ import TitleBar from '../components/TitleBar'
 import { useGetMessages } from '../hooks/useMessages'
 import getCasualTimestamp from '../lib/getCasualTimestamp'
 import { MessageExample } from '../models/Messages'
+import LoadingPage from '../components/LoadingPage'
 interface MessageMeProps {
   onClose: () => void
 }
@@ -17,7 +18,7 @@ const MessageMe = ({ onClose }: MessageMeProps) => {
     MessageExample | undefined
   >(messages?.find((message) => message.id === 1))
 
-  if (isLoading) return <p>Loading...</p>
+  if (isLoading) return <LoadingPage />
   if (isError) return <p>Error!</p>
   if (!messages || !activeMessage) return null
 
@@ -56,7 +57,7 @@ const MessageMe = ({ onClose }: MessageMeProps) => {
                   onClick={() => setActiveMessage(message)}
                   className={clsx(
                     'py-4 px-2 border-b-1 border-[rgb(134,126,126)] cursor-pointer',
-                    activeMessage.id === message.id && 'bg-gray-300 rounded-lg'
+                    activeMessage.id === message.id && 'bg-gray-300'
                   )}
                 >
                   <p className="text-[20px] font-bold">{message.name}</p>
