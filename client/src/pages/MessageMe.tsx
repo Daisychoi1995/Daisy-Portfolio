@@ -49,7 +49,7 @@ const MessageMe = ({ onClose }: MessageMeProps) => {
           }}
         />
         <div className="flex flex-row p-4 gap-4 h-full min-h-0">
-          <div className="flex flex-col overflow-auto w-[30%]">
+          <div className="flex flex-col overflow-auto w-[20%]">
             <div>
               {messages.map((message) => (
                 <div
@@ -60,16 +60,16 @@ const MessageMe = ({ onClose }: MessageMeProps) => {
                     activeMessage.id === message.id && 'bg-gray-300'
                   )}
                 >
-                  <p className="text-[20px] font-bold">{message.name}</p>
-                  <p className="text-[18px]">{message.question}</p>
-                  <p className="text-[12px]">
+                  <p className="text-[15px] font-bold">{message.name}</p>
+                  <p className="text-[13px]">{message.question}</p>
+                  <p className="text-[10px]">
                     {getCasualTimestamp(message.createdAt)}
                   </p>
                 </div>
               ))}
             </div>
           </div>
-          <div className="w-[70%] h-full">{renderMessageComponent()}</div>
+          <div className="w-[80%] h-full">{renderMessageComponent()}</div>
         </div>
       </div>
     </div>

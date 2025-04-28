@@ -39,7 +39,7 @@ export default function MainProjectCart() {
   ]
 
   return (
-    <div className="w-full h-full p-4 rounded shadow mb-4 flex flex-col items-center overflow-scroll">
+    <div className="w-full h-full p-4 rounded shadow mb-4 flex flex-col items-center overflow-scroll bg-white">
       <h1 className="text-[30px] my-4">💻 Frontend</h1>
       <div className="grid grid-cols-2 gap-8 mb-6">
         {frontend.map((item) => (
