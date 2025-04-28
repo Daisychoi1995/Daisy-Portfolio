@@ -45,7 +45,7 @@ const Projects = ({ onClose }: { onClose: () => void }) => {
           }}
         />
         <div className="flex flex-row p-4 gap-4 h-full min-h-0">
-          <div className="w-[30%] overflow-auto">
+          <div className="w-[20%] overflow-auto">
             <div className="w-full h-1/4 items-center">
               <div
                 className={clsx(
@@ -72,7 +72,7 @@ const Projects = ({ onClose }: { onClose: () => void }) => {
               ))}
             </div>
           </div>
-          <div className="w-[70%] h-full">{renderProjectComponent()}</div>
+          <div className="w-[80%] h-full">{renderProjectComponent()}</div>
         </div>
       </div>
     </div>

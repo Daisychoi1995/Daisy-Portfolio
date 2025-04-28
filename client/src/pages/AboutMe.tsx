@@ -31,38 +31,47 @@ const AboutMe = ({ onClose }: AboutMeProps) => {
             setIsMaximize(true)
           }}
         />
-        <div className="flex flex-col p-8 overflow-scroll h-full min-h-0">
-          <div className="flex gap-4 mb-6 justify-center">
+        <div className="flex flex-row p-8 overflow-scroll h-full min-h-0 justify-center items-center">
+          <div className="flex flex-col gap-4 mb-6 justify-center w-[50%] items-center">
             <img
               src="/assets/main.jpg"
-              className="w-[200px] h-auto rounded-full overflow-auto"
+              className="w-[200px] h-auto rounded-full"
             />
-            <div className="flex flex-col">
-              <h1 className="text-[70px] font-bo">Daisy Choi</h1>
-              <h2 className="text-[30px]">Software Developer</h2>
+            <div className="flex flex-col justify-center items-center">
+              <h1 className="text-[30px] font-bold">Daisy Choi</h1>
+              <h1 className="text-[20px] font-bold">Full-stact Developer</h1>
+              {/* <h2 className="text-[30px]">🎓 Electronic Engineering → 🍰 Dessert shop owner → 💻 Software Engineer</h2> */}
             </div>
           </div>
-          <div className="px-12">
+          <div className="px-8">
             <ul>
-              <li>
-                💡 I believe the best developers are those who never stop
-                learning — and I bring that mindset into every line of code.
+              <li className="text-[20px] font-bold">
+                Electronic Engineering → Dessert shop owner → Full-stact
+                Developer
               </li>
               <li>
-                🍰 My journey into software engineering began with{' '}
-                <strong>threebarfifty</strong>, a small dessert shop I started.
+                My journey into software development kicked off when I built a
+                custom website for my dessert shop,{' '}
+                <strong>Threebarfifty</strong>.
               </li>
               <li>
-                💻 Wanting more control over my business led me to discover a
-                passion for coding.
+                I wanted more control and ownership over what I was building
+                and that curiosity pulled me into full-stack development.
               </li>
               <li>
-                🎯 I love challenging myself, and diving into coding became the
-                perfect way to grow both personally and professionally. 📚🌱
+                Before all this, I studied Electronic Engineering, which gave me
+                a solid foundation for problem-solving (and a habit of asking
+                "why?" way too much).
               </li>
               <li>
-                💼 Today, I combine technical skills with an entrepreneurial
-                spirit to create solutions that make a real impact. 🌟
+                Later, I expanded my skills even more through hands-on training
+                at Dev Academy, diving into both front-end and back-end
+                projects.
+              </li>
+              <li>
+                Now, I’m passionate about building scalable systems, solving
+                real-world problems, and always pushing myself to learn
+                something new.
               </li>
             </ul>
           </div>
