@@ -39,7 +39,7 @@ const AboutMe = ({ onClose }: AboutMeProps) => {
             />
             <div className="flex flex-col justify-center items-center">
               <h1 className="text-[30px] font-bold">Daisy Choi</h1>
-              <h1 className="text-[20px] font-bold">Full-stact Developer</h1>
+              <h1 className="text-[20px] font-bold">Full-stack Developer</h1>
               {/* <h2 className="text-[30px]">🎓 Electronic Engineering → 🍰 Dessert shop owner → 💻 Software Engineer</h2> */}
             </div>
           </div>
