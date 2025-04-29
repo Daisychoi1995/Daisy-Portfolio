@@ -2,6 +2,8 @@ type Props = {
   onSelect: (menu: string) => void
 }
 
+
+
 export default function MenuBar({ onSelect }: Props) {
   const menuBar = [
     { src: "/assets/icons/icon-contacts.png", alt: "About Me", action: () => onSelect('about') },

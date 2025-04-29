@@ -6,7 +6,7 @@ async function main() {
   await prisma.project.createMany({
     data: [{
       name: 'ThreeBarFifty',
-      description: 'ThreeBarFifty was originally my own dessert shop, which I ran as a solo business. I started it with love and grew it with creativity and effort. Later, I decided to rebuild its website using modern web technologies to gain full ownership over the user experience and performance. Though the physical business is no longer running, this project is a way for me to keep its memory alive forever — and it`s what inspired me to fall in love with web development.',
+      description: 'ThreeBarFifty began as my own dessert shop, where I ran everything myself with a lot of love and creativity. As the business grew, I realized I wanted more control over the website and how it performed, so I decided to rebuild it using modern web technologies. While the physical shop is no longer in operation, this project has allowed me to preserve its memory and has sparked my passion for web development.',
       techStack: ['Next.js', 'Vercel', 'Railway','tailwind', 'PostgreSQL', 'Prisma', 'Firebase auth', 'Zustand', 'Cloudinary', 'Typescript', 'React', 'Vitest'],
       url: 'https://daisy-threebarfifty.vercel.app/',
       github: 'https://github.com/Daisychoi1995/Daisy_Threebarfifty',
@@ -53,8 +53,8 @@ async function main() {
     data: [
       {
         name: "Sally",
-        question: "How to contact you?",
-        description: "Feel free to reach out to me through any of the following channels: message section: Directly message me here | email: chj15937@gmail.com",
+        question: "How to reach out to you?",
+        description: "You can use the 'Message Daisy' section or email me at chj15937@gmail.com.",
         contact: "sally@daisy.com",
         createdAt: new Date(),
       },{
@@ -66,13 +66,13 @@ async function main() {
       },{
         name: "Ruby",
         question: "Why did you decide to study?",
-        description: "Honestly, it all started with my dessert shop, Threebarfifty! I was having a blast running the business, but then I realized I wanted more control over how things worked behind the scenes. It made me think back to my uni when I studied Electronic Engineering. That's when I decided to dive into coding, and the next thing I knew, I was hooked! Now, I'm all about learning new skills and turning my ideas into reality. It's like another challenge for my life!",
+        description: "It all started with my dessert shop, Threebarfifty. I initially built its website using Wix, thinking it would be enough for a small business. But I quickly realized I wanted more control over the design and performance, which led me to dive into web development. This reminded me of my time studying Electronic Engineering at uni, where I loved solving problems and understanding systems. Coding felt like the perfect way to continue that. I started learning HTML, CSS, JavaScript, and full-stack development, and before I knew it, I was hooked. Now, I’m focused on constantly learning and improving my skills. Every project is a new challenge, and I love bringing my ideas to life through code.",
         contact: "ruby@daisy.com",
         createdAt: new Date(),
       },{
         name: "Pilly",
         question: "What's your hobby?",
-        description: "I love hanging out with family and friends! Sometimes I just take a solo drive and spend some chill time with my Champ (my super cute black cat 🐱). Lately, I`ve been trying to hit the gym too... but let`s be honest, I could definitely use a bit more effort there! 😜🫨",
+        description: "I love spending time with family and friends! Sometimes, I just take a solo drive and enjoy some chill moments with my Champ (my super cute black cat 🐱). Lately, I’ve been trying to hit the gym more... though, let's be real, I could definitely put in a bit more effort there! 😜🫨 I also enjoy playing golf, whether it’s a solo round or with friends, and I’m always up for a peaceful drive to the beach! ⛳🚗🌊",
         contact: "pilly@daisy.com",
         createdAt: new Date(),
       }
