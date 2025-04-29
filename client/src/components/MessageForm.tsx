@@ -30,33 +30,32 @@ export default function MessageForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="w-full max-w-lg mx-auto">
-  <div className="w-full h-full flex flex-row sm:flex-row sm:items-center sm:justify-between">
-    <div className="relative w-full sm:w-2/3">
-      <div className="mb-4 sm:mb-0 sm:flex sm:gap-4">
-        <input
-          type="text"
-          name="name"
-          required
-          placeholder="Name"
-          value={formData.name}
-          onChange={(e) =>
-            setFormData((prev) => ({ ...prev, name: e.target.value }))
-          }
-           className="border-1 border-gray-400 rounded-[20px] px-4 py-2 w-full sm:w-auto"
-        />
-        <input
-          type="text"
-          name="contact"
-          required
-          placeholder="Contact"
-          value={formData.contact}
-          onChange={(e) =>
-            setFormData((prev) => ({ ...prev, contact: e.target.value }))
-          }
-          className="border-1 border-gray-400 rounded-[20px] px-4 py-2 w-full sm:w-auto"
-        />
-      </div>
+    <div className="w-full h-full py-10 rounded bg-white overflow-auto shadow">
+    <form onSubmit={handleSubmit} className="mx-auto flex flex-col gap-4 px-10 pt-10">
+      <input
+        type="text"
+        name="name"
+        required
+        placeholder="Name"
+        value={formData.name}
+        onChange={(e) =>
+          setFormData((prev) => ({ ...prev, name: e.target.value }))
+        }
+        className="border border-gray-400 rounded-[20px] px-4 py-2 w-full"
+      />
+  
+      <input
+        type="text"
+        name="contact"
+        required
+        placeholder="Contact"
+        value={formData.contact}
+        onChange={(e) =>
+          setFormData((prev) => ({ ...prev, contact: e.target.value }))
+        }
+        className="border border-gray-400 rounded-[20px] px-4 py-2 w-full"
+      />
+  
       <textarea
         name="description"
         required
@@ -65,21 +64,20 @@ export default function MessageForm() {
         onChange={(e) =>
           setFormData((prev) => ({ ...prev, description: e.target.value }))
         }
-        rows={2}
-        className="border border-gray-400 rounded-[20px] px-4 py-2 w-full resize-none max-h-[4.5rem] sm:max-h-[6rem] overflow-auto mt-2"
+        rows={5}
+        className="border border-gray-400 rounded-[20px] px-4 py-2 w-full resize-none overflow-auto"
       />
-    </div>
-
-    <div className="sm:absolute sm:right-16 sm:bottom-4 mt-4 sm:mt-0">
-      <button
-        type="submit"
-        className="w-10 h-10 flex items-center justify-center bg-blue-500 text-white text-[25px] font-bold rounded-full shadow-md hover:bg-blue-600 transition"
-      >
-        ↑
-      </button>
-    </div>
+  
+      <div className="flex justify-center">
+        <button
+          type="submit"
+          className="w-10 h-10 flex items-center justify-center bg-blue-500 text-white text-[25px] font-bold rounded-full shadow-md hover:bg-blue-600 transition"
+        >
+          ↑
+        </button>
+      </div>
+    </form>
   </div>
-</form>
-
+  
   )
 }

@@ -21,7 +21,7 @@ export default function ProjectCard({ project }: { project: Project }) {
 
         <p className="w-[60%]">{project.description}</p>
       </div>
-      <div className="flex flex-row mb-4">
+      <div className="flex flex-row mb-4 justify-center">
         <ul className="grid grid-cols-5 gap-2">
           {project.techStack?.map((tech, index) => (
             <li
@@ -38,7 +38,7 @@ export default function ProjectCard({ project }: { project: Project }) {
           <a href={project.url} target="_blank">
             <img
               src="/assets/icons/icon-chrome.png"
-              alt="contacts"
+              alt="Url"
               className="w-[60px] h-auto hover:scale-110 transition"
             />
           </a>
@@ -47,7 +47,7 @@ export default function ProjectCard({ project }: { project: Project }) {
           <a href={project.github} target="_blank">
             <img
               src="/assets/icons/icon-git.png"
-              alt="contacts"
+              alt="Github"
               className="w-[60px] h-auto hover:scale-110 transition"
             />
           </a>
