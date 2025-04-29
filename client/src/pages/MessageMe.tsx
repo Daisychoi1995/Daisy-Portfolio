@@ -58,12 +58,12 @@ const MessageMe = ({ onClose }: MessageMeProps) => {
             <div>
               <div
                 className={clsx(
-                  'py-4 px-2 border-b border-[rgb(134,126,126)] cursor-pointer',
+                  'flex py-4 px-2 border-b border-[rgb(134,126,126)] cursor-pointer items-center justify-center',
                   typeof activeMessage === 'string' && 'bg-gray-300'
                 )}
                 onClick={() => setActiveMessage('main')}
               >
-                <h1 className="text-[20px] pl-2 font-bold">Message Daisy</h1>
+                <h1 className="text-[20px] font-bold">Message Daisy</h1>
               </div>
               {messages.map((message) => (
                 <div
