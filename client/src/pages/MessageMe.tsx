@@ -84,7 +84,7 @@ const MessageMe = ({ onClose }: MessageMeProps) => {
               ))}
             </div>
           </div>
-          <div className="w-[80%] h-full">{renderMessageComponent()}</div>
+          <div className="w-[80%] h-full ">{renderMessageComponent()}</div>
         </div>
       </div>
     </div>

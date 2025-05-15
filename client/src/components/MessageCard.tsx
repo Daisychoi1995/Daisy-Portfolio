@@ -13,7 +13,7 @@ export default function MessageCard({ message }: { message: MessageExample }) {
           {getCasualTimestamp(message.createdAt)}
         </p>
         </div>
-        <div className='mx-4 flex flex-col'>
+        <div className='mx-4 flex flex-col pb-6'>
           <div className="relative w-auto ml-auto mb-4 max-w-[90%]">
             <div className="bg-blue-500 text-white text-[18px] px-6 py-3 rounded-[30px] rounded-br-[4px]">
               <p>{message.question}</p>

@@ -45,33 +45,28 @@ const AboutMe = ({ onClose }: AboutMeProps) => {
           </div>
           <div className="px-8">
             <ul>
-              <li className="text-[20px] font-bold">
-                Electronic Engineering → Dessert shop owner → Full-stact
+              <li className="text-[25px] font-bold">
+                Electronic Engineering → Dessert shop owner → Full-stack
                 Developer
               </li>
               <li>
-                My journey into software development kicked off when I built a
-                custom website for my dessert shop,{' '}
-                <strong>Threebarfifty</strong>.
+              My journey into software development started when I built a custom website for my dessert shop, <strong>Threebarfifty</strong>, to replace Wix and gain full control.
               </li>
               <li>
-                I wanted more control and ownership over what I was building
-                and that curiosity pulled me into full-stack development.
+                That got me hooked, and I dove headfirst into full-stack
+                development.
               </li>
               <li>
-                Before all this, I studied Electronic Engineering, which gave me
-                a solid foundation for problem-solving (and a habit of asking
-                "why?" way too much).
+                Before all this, I studied Electronic Engineering, so I’m pretty
+                good at breaking down problems and asking “why?” way too much.
               </li>
               <li>
-                Later, I expanded my skills even more through hands-on training
-                at Dev Academy, diving into both front-end and back-end
-                projects.
+                Then I leveled up with hands-on training at Dev Academy,
+                tackling everything from front-end to back-end projects.
               </li>
               <li>
-                Now, I’m passionate about building scalable systems, solving
-                real-world problems, and always pushing myself to learn
-                something new.
+                Now, I’m all about building neat, scalable stuff, solving real
+                problems, and learning something new every day.
               </li>
             </ul>
           </div>

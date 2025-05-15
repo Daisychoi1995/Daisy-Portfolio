@@ -30,7 +30,7 @@ export default function MessageForm() {
   }
 
   return (
-    <div className="w-full h-full py-10 rounded bg-white overflow-auto shadow">
+    <div className="w-full h-full py-4 rounded bg-white overflow-auto shadow">
     <form onSubmit={handleSubmit} className="mx-auto flex flex-col gap-4 px-10 pt-6 items-center">
       <h1 className='text-[30px] font-bold'>Message Me!</h1>
       <input
