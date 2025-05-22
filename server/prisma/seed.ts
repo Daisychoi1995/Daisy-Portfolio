@@ -21,6 +21,14 @@ async function main() {
       imageUrl: '/assets/portfolio.jpg'
     },
     {
+      name: 'Gatherly',
+      description: 'This is my first full-stack app built with .NET. While developing it, I became especially interested in the backend side and wanted to understand how things work behind the scenes. That curiosity led me to explore .NET, building on my C/C++ background from university. Gatherly is an app designed to help users find study mates and study spaces.',
+      techStack: ['.NET', 'Blazor', 'Razor'],
+      url: '',
+      github: 'https://github.com/Daisychoi1995/Gatherly.Api',
+      imageUrl: '/assets/dotnet.png'
+    },
+    {
       name: 'Geared Up',
       description: 'My final group showcase project! I teamed up with five awesome developers to build everything from scratch. It was my first time working in a group this big—before, I`d only collaborated with 2 or 3 people, so it definitely came with new challenges. But honestly, that made it even more rewarding. We learned how to align our ideas, divide tasks effectively, and truly function as a team. One thing I`m super proud of? We wrote 43 tests to keep our codebase solid—definitely the most I`ve ever done in a project. It was intense, fun, and a huge step up in both teamwork and technical skills!',
       techStack: ['React', 'Sqlite3', 'Express', 'Typescript', 'Tailwind', 'Knex', 'Auth0', 'Superagent', 'Vite', 'Vitest', 'Nock', 'React Testing Library'],
