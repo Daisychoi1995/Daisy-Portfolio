@@ -13,11 +13,13 @@ export default function MainProjectCart() {
     { name: 'Axios', level: 4 },
     { name: 'Zustand', level: 5 },
     { name: 'Cloudinary', level: 4 },
+    { name: 'Blazoe', level: 3 },
+    { name: 'Razor', level: 3 },
   ]
 
   const backend: Tech[] = [
     { name: 'Express', level: 5 },
-    { name: '.NET', level: 2 },
+    { name: '.NET', level: 3 },
     { name: 'Prisma', level: 4 },
     { name: 'Node.js', level: 4 },
     { name: 'Stripe', level: 4 },
